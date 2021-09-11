@@ -55,10 +55,10 @@ User Homepage and other pages :rocket:
 
 **Note: Please provide the Email and Password through which the verification code is being sent otherwise it will throw an error.**
 
-# Here's How to do it!
+## Here's How to do it!
 
 Goto ``` passify\task\views.py ``` and enter the mail and password in the ``` send_mail() ``` function
 
-# Here's how it looks:
+## Here's how it looks:
 
 ![Sample8](Sample-Imgs/8.png)
