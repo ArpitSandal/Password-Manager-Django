@@ -2,7 +2,7 @@
 
 A Password Manager written in Django and Python.
 
-It can store Passwords, Payment Cards and Notes. All the passwords, card numbers, card pins, cvv's
+It can store Passwords, Payment Cards and Notes. All the passwords, card numbers, card pins, cvv's,
 notes etc. are first hashed and then stored in the Database. All of the hashed values are decrypted
 only when user Logs in, in his/her account.
 
