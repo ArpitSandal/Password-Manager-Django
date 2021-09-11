@@ -1,0 +1,297 @@
+body, html{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+::-webkit-scrollbar{
+  width: 7px;
+  height: 7px;
+  }
+  ::-webkit-scrollbar-thumb{
+  background: #B3AFB3;
+  border-radius: 30px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+  background: #B3AFB3;
+  }
+  ::-webkit-scrollbar-track{
+  background: #F0F0F0;
+  border-radius: 30px;
+  box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+  }
+
+  .notshow{
+    display: none;
+    transition: all;
+    transition-duration: 0.5s;
+  }
+
+/* ------------- Categories----------- */
+
+.categories{
+  height: 100%;
+  width: 23%;
+  background-color: #1f2830;
+  color: rgb(241, 235, 235);
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+ 
+}
+
+.categorieslist{
+  margin-top: 0.5em;
+  /* border: 2px solid white; */
+}
+
+.categories i{
+  padding: 0.5em;
+  /* border: 2px solid; */
+  font-size: 17px;
+  margin-left: 0.5em;
+}
+
+.categorieslist ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 0em;
+  text-transform: capitalize;
+}
+
+.categorieslist li{
+  padding: 0.3em;
+  transition-property: all;
+  transition-duration: 0.5s;
+  cursor: pointer;
+  /* border: 2px solid black; */
+}
+
+.logout{
+  /* border: 2px solid brown; */
+  margin-bottom: 0.5em;
+}
+
+
+.logout a{
+  margin-left: 0.1em;
+  /* border: 2px solid red; */
+  display: inline-block;
+  color: rgb(241, 235, 235);
+  text-decoration: none;
+}
+
+
+/* ----------------- Passes ------------------ */
+
+.passes{
+  height: 100%;
+  width: 77%;
+  position: relative;
+  overflow: hidden;
+  /* scrollbar-height: 7px; */
+  /* background-color: orange; */
+
+}
+
+.pass-cards-notes{
+  height: 90%;
+}
+
+.pic-wrapper{
+  /* border: 2px solid green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  /* max-width: 730px; */
+  height: 530px;
+  min-height: 530px;
+}
+
+.pic{
+  width: 50%;
+  /* border: 2px solid black; */
+  margin: 0 auto;
+}
+
+.pic img{
+  width: 100%;
+  opacity: 12%;
+}
+
+/* ----------pass list ------------- */
+
+.passlistwrapper{
+  /* border: 2px solid red; */
+  padding: 0.7em;
+  height: 85%;
+  overflow-y :scroll;
+  position: relative;
+  scrollbar-width: thin;
+}
+
+.passlist{
+  border: 1px solid rgb(230, 227, 227);
+  width: 100%;
+  padding: 0.9em;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  border-radius: 6px;
+  background-color: rgba(245, 245, 245, 0.418);
+  opacity: 1;
+  /* box-shadow: 2px 3px 15px rgb(219, 215, 215); */
+  display: inline-block;
+}
+
+.passlist i{
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.passlistwrapper a{
+  text-decoration: none;
+  font-size: 1.05rem;
+  color: black;
+  font-weight: 400;
+  text-transform: capitalize;
+  /* border: 2px solid; */
+  display: block;
+  margin: 0 auto;
+  width: 87%;
+
+}
+
+.createnew{
+  position: absolute;
+  /* border: 2px solid red; */
+  bottom: 0;
+  right: 0;
+  margin-right: 0.5em;
+  color: gray;
+  padding: 0.3em;
+  margin-bottom: 0.5em;
+}
+
+.createnew ul{
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.createnew a{
+  font-size: 1.7rem;
+}
+
+
+
+/* ---------title, name---------- */
+
+.title-name-wrapper{
+  height: 10%;
+  background-color: whitesmoke;
+  text-transform: capitalize;
+  padding: 0.5em;
+}
+
+.title-name{
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 90%;
+  color: rgb(39, 39, 39);
+}
+
+h5{
+  /* border: 2px solid red; */
+  text-align: center;
+  line-height: 35px;
+}
+
+
+
+/* -------------- Hover area--------------- */
+
+.categorieslist li:hover{
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  background-color: #181d22;
+}
+
+.logout a:hover{
+  color:rgb(180, 175, 175);
+}
+
+/* --------------- Media queries--------------- */
+@media(max-width: 760px){
+  .passes{
+    width: 85%;
+    transition: all;
+    transition-duration: 0.5s;
+  }
+  .categories{
+    width: 15%;
+    transition: all;
+    transition-duration: 0.5s;
+  }
+
+  .categorieslist li{
+    /* border: 2px solid white; */
+    text-align: center;
+    margin: 0;
+  }
+
+  .categorieslist i{
+    padding: 0;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .logout a{
+    margin: 0;
+    text-align: center;
+    /* border: 2px solid white; */
+    display: block;
+  }
+
+  .logout i{
+    margin: 0;
+    font-size: 1.1rem;
+    /* padding: 0; */
+  }
+
+
+
+  .notshowlist{
+    display: none;
+  }
+}
+
+
+/* --------------- Animation area ---------------- */
+@keyframes myblink{
+  from{
+    opacity: 1;
+  }
+  to{
+    opacity: 0;
+  }
+}
+
+#blink{
+  animation-name: myblink;
+  animation-duration: 0.55s;
+  animation-timing-function:ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

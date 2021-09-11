@@ -1,0 +1,245 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar{
+    width: 7px;
+    height: 7px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #B3AFB3;
+    border-radius: 30px;
+}
+
+ ::-webkit-scrollbar-thumb:hover{
+    background: #B3AFB3;
+ }
+
+ ::-webkit-scrollbar-track{
+    background: #F0F0F0;
+    border-radius: 30px;
+    box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}
+
+.container{
+    /* border: 2px solid red; */
+    height: 100%;
+    display: flex;
+    width: 100%;
+}
+
+/* --------Sider area------------- */
+.sider{
+    width: 7%;
+    background-color: #1f2830;
+    height: 100%;
+    color: rgb(241, 235, 235);
+    display: flex;
+    justify-content: center;
+
+}
+
+.arrow a{
+    color: rgb(241, 235, 235);
+    font-size: 1.3rem;
+    /* border: 2px solid white; */
+}
+
+.arrow{
+    margin-top: 0.5em;
+}
+
+/* ------------content area------------- */
+
+.content{
+    width: 93%;
+    height: 100%;
+    position: relative;
+    /* background-color: aqua; */
+}
+
+/* names of objects */
+.content h6{
+    /* border: 2px solid black; */
+    text-transform: capitalize;
+    font-size: 1.1rem;
+    /* color: rgb(61, 60, 60); */
+    color: rgb(61, 60, 60);
+    margin-top: 0.1em;
+}
+
+.heading{
+    text-transform: capitalize;
+    text-align: center;
+    padding: 0.5em;
+    color: gray;
+}
+
+.contentwrapper{
+    /* border: 2px solid red; */
+    height: 89%;
+    padding: 1.5em 4em;
+    position: relative;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+
+
+}
+
+.contentwrapper p{
+    font-size: 0.97rem;
+}
+
+.icons i{
+    font-size: 1.4rem;
+    padding: 0.1em;
+    /* color: #8a19d6e8; */
+    color: rgb(61, 60, 60);
+    cursor: pointer;
+    margin-left: 0.1em;
+
+}
+
+.btn{
+    margin-top: 1.5em;
+    background-color: #8a19d6e8;
+    border: 0;
+    margin-right: 0.5em;
+    font-size: 0.95rem;
+    transition: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+    color: white;
+}
+
+.del{
+    background-color: #333333;
+}
+
+/* ----------pic area ------------- */
+
+.pic-wrapper{
+    /* border: 2px solid green; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    /* left: 50%; */
+    margin-top: 1em;
+    max-width: 890px;
+    height: 580px;
+    min-height: 560px;
+  }
+  
+  .pic{
+    width: 50%;
+    /* border: 2px solid black; */
+    margin: 0 auto;
+  }
+  
+  .pic img{
+    width: 100%;
+    opacity: 12%;
+  }
+
+/* ---------- text, textarea, select --------------- */
+
+input{
+    background-color: transparent;
+    padding: 0.3em 0em;
+    /* border-radius: 5px; */
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    margin-bottom: 2em;
+    width: 35%;
+    min-width: 200px;
+    color: rgb(37, 37, 37);
+}
+
+input[type=password]{
+    font-size: 0.8rem;
+}
+
+textarea{
+    background-color: transparent;
+    padding: 0.3em 0em;
+    /* border-radius: 5px; */
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    margin-bottom: 2em;
+    width: 45%;
+    min-width: 200px;
+    color: rgb(37, 37, 37);
+    resize: none;
+    height: 130px;
+}
+
+select{
+    background-color: transparent;
+    padding: 0.1em 0em;
+    /* border-radius: 5px; */
+    border-color: transparent;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    margin-bottom: 2em;
+    margin-top: 0.5em;
+    width: 28%;
+    min-width: 200px;
+    color: rgb(37, 37, 37);
+}
+
+
+option{
+    background-color: transparent;
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0;
+}
+
+option::selection{
+    color: red;
+}
+
+input:focus,
+select:focus,textarea:focus {
+    border-color: transparent;
+    border-bottom: 1px solid #9b3ddae8;
+    text-decoration: none;
+    outline: none;
+}
+
+
+/* -------------- Hover area------------ */
+.btn:hover{
+    background-color: #8a19d6e8;
+    filter: brightness(120%);
+    transition: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.del:hover{
+    background-color: #333333;
+}
+
+.arrow a:hover{
+    color:rgb(180, 175, 175);
+}
+
+.icons i:hover{
+    color: #7805c5e8;
+}
+
+/* ---------------- Media Queries ----------------- */
+
+@media(max-width: 760px){
+    .sider{
+        width: 11%;
+    }
+    .content{
+        width: 89%;
+    }
+}

@@ -1,0 +1,21 @@
+{% extends 'credit-login-notes/content.html' %}
+
+
+{% block content %}
+<div class="heading">
+    <h5>secure notes</h5>
+</div>
+<div class="contentwrapper">
+    <form action="" method="POST">{% csrf_token %}
+        <h6>Name:</h6>
+        {{ form.name }}
+
+        <h6>Note:</h6>
+        <textarea name="getnotes" placeholder="Enter your Note" required>{{ storednotes }}</textarea>
+
+        <h6>Last updated:</h6>
+        <p>{{ updated }}</p>
+        <button type="submit" class="btn btn-primary" value="save" name="pk">Save</button>
+    </form>
+</div>
+{% endblock content %}
