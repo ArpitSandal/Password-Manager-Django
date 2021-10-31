@@ -20,7 +20,20 @@ def allobjects_view(request):
     obj1 = CreditPass.objects.filter(user = myuser)
 
     obj2 = NotesPass.objects.filter(user = myuser)
-    # print(obj0)
+    for i in obj0:
+        if(len(i.name)>15):
+            i.name=i.name[0:14]
+            i.name+="..."
+    for i in obj1:
+        if(len(i.name)>16):
+            i.name=i.name[0:16]
+            i.name+="..."
+    
+    for i in obj2:
+        if(len(i.name)>16):
+            i.name=i.name[0:16]
+            i.name+="..."
+
     context={
         'loginpass': obj0,
         'creditpass': obj1,
@@ -92,8 +105,8 @@ def login_view(request):
         user=authenticate(request, username=username, password=password)
 
         if user is not None:
-            # login(request, user)
-            # return redirect('/')
+            login(request, user)
+            return redirect('/')
             #getting the primary key for that user and setting it equal to pk of session
             request.session['pk']=user.pk
             return redirect('verify')
@@ -185,6 +198,7 @@ def dehashit(getpassword):
 ############### Checking if the data requested belongs to the loggedin user ########
 def checker(obj, my_id):
     check = False
+    #iterating through all the objects and seeing if the requested objects belongs to this user
     for i in obj:
         if str(i.id) == my_id:
             check=True
@@ -225,8 +239,9 @@ def updatelogin_view(request, my_id):
     #decrypting the password
     storedpassword=dehashit(obj.password)
     updated=obj.updated
-    # print(storedpassword)
-    # print(obj.password)
+   
+
+    #Checking if the requested data belongs to this user
     thisuserobj = LoginPass.objects.filter(user=request.user)
     check = checker(thisuserobj, my_id)
     
@@ -301,6 +316,8 @@ def updatecredit_view(request, my_id):
     storedcvv = dehashit(obj.cvv)
     # print(obj.number)
     updated = obj.updated
+
+    #Checking if the requested data belongs to this user
     thisuserobj = CreditPass.objects.filter(user=request.user)
     check = checker(thisuserobj, my_id)
 
@@ -371,6 +388,8 @@ def updatenotes_view(request, my_id):
     updated = obj.updated
 
     updated = obj.updated
+
+    #Checking if the requested data belongs to this user
     thisuserobj = NotesPass.objects.filter(user=request.user)
     check = checker(thisuserobj, my_id)
 

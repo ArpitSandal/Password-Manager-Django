@@ -1,35 +1,36 @@
-body, html{
+body,
+html {
   margin: 0;
   width: 100%;
   height: 100%;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 7px;
   height: 7px;
-  }
-  ::-webkit-scrollbar-thumb{
-  background: #B3AFB3;
+}
+::-webkit-scrollbar-thumb {
+  background: #b3afb3;
   border-radius: 30px;
-  }
-  ::-webkit-scrollbar-thumb:hover{
-  background: #B3AFB3;
-  }
-  ::-webkit-scrollbar-track{
-  background: #F0F0F0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b3afb3;
+}
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
   border-radius: 30px;
-  box-shadow: inset 0px 0px 0px 0px #F0F0F0;
-  }
+  box-shadow: inset 0px 0px 0px 0px #f0f0f0;
+}
 
-  .notshow{
-    display: none;
-    transition: all;
-    transition-duration: 0.5s;
-  }
+.notshow {
+  display: none;
+  transition: all;
+  transition-duration: 0.5s;
+}
 
 /* ------------- Categories----------- */
 
-.categories{
+.categories {
   height: 100%;
   width: 23%;
   background-color: #1f2830;
@@ -39,22 +40,22 @@ body, html{
   flex-direction: column;
   justify-content: space-between;
   position: relative;
- 
+  /* border: 2px solid red; */
 }
 
-.categorieslist{
+.categorieslist {
   margin-top: 0.5em;
   /* border: 2px solid white; */
 }
 
-.categories i{
+.categories i {
   padding: 0.5em;
-  /* border: 2px solid; */
+  /* border: 2px solid red; */
   font-size: 17px;
   margin-left: 0.5em;
 }
 
-.categorieslist ul{
+.categorieslist ul {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -63,7 +64,7 @@ body, html{
   text-transform: capitalize;
 }
 
-.categorieslist li{
+.categorieslist li {
   padding: 0.3em;
   transition-property: all;
   transition-duration: 0.5s;
@@ -71,13 +72,12 @@ body, html{
   /* border: 2px solid black; */
 }
 
-.logout{
+.logout {
   /* border: 2px solid brown; */
   margin-bottom: 0.5em;
 }
 
-
-.logout a{
+.logout a {
   margin-left: 0.1em;
   /* border: 2px solid red; */
   display: inline-block;
@@ -85,24 +85,23 @@ body, html{
   text-decoration: none;
 }
 
-
 /* ----------------- Passes ------------------ */
 
-.passes{
+.passes {
   height: 100%;
   width: 77%;
   position: relative;
   overflow: hidden;
   /* scrollbar-height: 7px; */
   /* background-color: orange; */
-
+  /* border: 2px solid red; */
 }
 
-.pass-cards-notes{
+.pass-cards-notes {
   height: 90%;
 }
 
-.pic-wrapper{
+.pic-wrapper {
   /* border: 2px solid green; */
   display: flex;
   align-items: center;
@@ -114,29 +113,29 @@ body, html{
   min-height: 530px;
 }
 
-.pic{
+.pic {
   width: 50%;
   /* border: 2px solid black; */
   margin: 0 auto;
 }
 
-.pic img{
+.pic img {
   width: 100%;
   opacity: 12%;
 }
 
 /* ----------pass list ------------- */
 
-.passlistwrapper{
+.passlistwrapper {
   /* border: 2px solid red; */
-  padding: 0.7em;
+  padding: 1em;
   height: 85%;
-  overflow-y :scroll;
+  overflow-y: scroll;
   position: relative;
   scrollbar-width: thin;
 }
 
-.passlist{
+.passlist {
   border: 1px solid rgb(230, 227, 227);
   width: 100%;
   padding: 0.9em;
@@ -149,12 +148,16 @@ body, html{
   display: inline-block;
 }
 
-.passlist i{
+.passlist div{
+  display: inline-block;
+}
+
+.passlist i {
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
 
-.passlistwrapper a{
+.passlistwrapper a {
   text-decoration: none;
   font-size: 1.05rem;
   color: black;
@@ -164,45 +167,49 @@ body, html{
   display: block;
   margin: 0 auto;
   width: 87%;
-
 }
 
-.createnew{
+.createnew {
   position: absolute;
   /* border: 2px solid red; */
   bottom: 0;
   right: 0;
-  margin-right: 0.5em;
+  margin-right: 0.6em;
   color: gray;
   padding: 0.3em;
   margin-bottom: 0.5em;
 }
 
-.createnew ul{
+.createnew ul {
   padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
-.createnew a{
+.createnew i {
   font-size: 1.7rem;
+  margin: 0.3em 0;
 }
 
+#card{
+  font-size: 1.5rem;
+  /* border: 2px solid red; */
+}
 
 
 /* ---------title, name---------- */
 
-.title-name-wrapper{
+.title-name-wrapper {
   height: 10%;
   background-color: whitesmoke;
   text-transform: capitalize;
   padding: 0.5em;
+  /* margin-bottom: 1em; */
 }
 
-.title-name{
+.title-name {
   /* border: 2px solid black; */
   display: flex;
   justify-content: space-between;
@@ -211,87 +218,130 @@ body, html{
   color: rgb(39, 39, 39);
 }
 
-h5{
+h5 {
   /* border: 2px solid red; */
   text-align: center;
-  line-height: 35px;
+  /* line-height: 35px; */
 }
-
-
 
 /* -------------- Hover area--------------- */
 
-.categorieslist li:hover{
+.categorieslist li:hover {
   transition-property: all;
   transition-duration: 0.5s;
   transition-timing-function: ease-in-out;
   background-color: #181d22;
 }
 
-.logout a:hover{
-  color:rgb(180, 175, 175);
+.logout a:hover {
+  color: rgb(180, 175, 175);
+}
+
+.createnew li:active{
+  color: #8a19d6;
+}
+
+.passlist:active{
+  color: #8a19d6;
 }
 
 /* --------------- Media queries--------------- */
-@media(max-width: 760px){
-  .passes{
-    width: 85%;
-    transition: all;
-    transition-duration: 0.5s;
-  }
-  .categories{
-    width: 15%;
+@media (max-width: 768px) {
+
+  .passes {
+    width: 82%;
     transition: all;
     transition-duration: 0.5s;
   }
 
-  .categorieslist li{
+  .categories {
+    width: 18%;
+
+    transition: all;
+    transition-duration: 0.5s;
+  }
+
+  .categorieslist li {
     /* border: 2px solid white; */
     text-align: center;
     margin: 0;
   }
 
-  .categorieslist i{
+  .categorieslist i {
     padding: 0;
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
-  .logout a{
+  .logout a {
     margin: 0;
     text-align: center;
     /* border: 2px solid white; */
     display: block;
   }
 
-  .logout i{
+  .logout i {
     margin: 0;
     font-size: 1.1rem;
     /* padding: 0; */
   }
 
-
-
-  .notshowlist{
+  .notshowlist {
     display: none;
   }
+
+  .title-name-wrapper{
+    height: 7.5%;
+    /* padding: 0.5; */
+    padding: 0.6em 0em;
+    margin-bottom: 0.5em;
+    /* border: 2px solid red; */
+  }
+
+  .title-name-wrapper h3, h5{
+    font-size: 1rem;
+  }
+
+  h5{
+    font-size: 0.9rem;
+  }
+
+  #plus{
+    font-size: 1.4rem;
+  }
+
+  #note,#lock{
+    font-size: 1.3rem;
+  }
+
+  #card{
+    font-size: 1.2rem;
+  }
+
+  .passlist{
+    padding: 0.5em;
+  }
+
+  .passlist div,i{
+    font-size: 0.9rem;
+  }
+
 }
 
-
 /* --------------- Animation area ---------------- */
-@keyframes myblink{
-  from{
+@keyframes myblink {
+  from {
     opacity: 1;
   }
-  to{
+  to {
     opacity: 0;
   }
 }
 
-#blink{
+#blink {
   animation-name: myblink;
   animation-duration: 0.55s;
-  animation-timing-function:ease-in-out;
+  animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }

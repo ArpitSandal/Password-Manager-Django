@@ -103,7 +103,7 @@
                             </div>
                         </div>
 
-                        <h5 id="changedcategory" style="color: rgb(63, 61, 61);">All Categories</h5>
+                        <h5 id="changedcategory" style="color: rgb(63, 61, 61); margin: 0.5em">All Categories</h5>
 
 
                         <!-- passlist -->
@@ -113,7 +113,7 @@
                                 {% for i in loginpass %}
                                 <a href="{% url 'updatelogin' i.id %}">
                                     <div class="passlist">
-                                        <i class="fas fa-lock"></i> {{ i.name }}
+                                        <i class="fas fa-lock"></i> <div>{{ i.name }}</div>
                                     </div>
                                 </a>
                                 {% endfor %}
@@ -124,7 +124,7 @@
                                 <a href="{% url 'updatecredit' i.id %}">
                                     <div class="passlist">
                                         <i class="fas fa-credit-card"></i>
-                                        {{ i.name }}
+                                        <div>{{ i.name }}</div>
                                     </div>
                                 </a>
                                 {% endfor %}
@@ -135,7 +135,7 @@
                                 {% for i in notespass %}
                                 <a href="{% url 'updatenotes' i.id %}">
                                     <div class="passlist" id="notesshow">
-                                        <i class="fas fa-sticky-note"></i> {{ i.name }}
+                                        <i class="fas fa-sticky-note"></i> <div>{{ i.name }}</div>
                                     </div>
                                 </a>
                                 {% endfor %}
@@ -147,16 +147,16 @@
                         <div class="createnew">
                             <ul>
                                 <a href="{% url 'storelogin' %}" class="notshowcat notshow">
-                                    <li><i class="fas fa-lock"></i></li>
+                                    <li><i id="lock" class="fas fa-lock"></i></li>
                                 </a>
                                 <a href="{% url 'storecredit' %}" class="notshowcat notshow">
-                                    <li><i class="fas fa-credit-card" style="font-size: 1.6rem;"></i></li>
+                                    <li><i id="card" class="fas fa-credit-card"></i></li>
                                 </a>
                                 <a href="{% url 'storenotes' %}" class="notshowcat notshow">
-                                    <li><i class="fas fa-sticky-note"></i></li>
+                                    <li><i id="note" class="fas fa-sticky-note"></i></li>
                                 </a>
-                                <li onclick="showcreatenew()" style="cursor: pointer;" class="plus"><i
-                                        class="fas fa-plus-circle" style="font-size: 2rem; color:#8a19d6"></i></li>
+                                <li onclick="showcreatenew()" style="cursor: pointer;"><i id="plus"
+                                        class="fas fa-plus-circle" style=" color:#8a19d6"></i></li>
                             </ul>
 
                         </div>
